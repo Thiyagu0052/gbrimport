@@ -35,10 +35,12 @@
   
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
 <script>
-  document.addEventListener("load",table())
-   function table() {
-  ('#myTable').DataTable();
-} ;
+  setTimeout(function(){
+    $(document).ready( function () {
+    $('#myTable').DataTable();
+} );
+    }, 1700);
+  
 </script>
 
     <title>Gb Refinerys</title>
