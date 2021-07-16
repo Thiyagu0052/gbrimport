@@ -1,7 +1,7 @@
 
 import React , {useState,useEffect} from 'react'
 import firebase from '../util/firebase'
-import numtoWords from '../util/numtoWords'
+
 
 
 export default function Outform(props) {
@@ -20,7 +20,7 @@ export default function Outform(props) {
             lastAr.push(obtainForm)
         const newState = [...lastAr]
         setlastArr(newState)
-       
+        setTimeout(function(){ window.print() }, 3000);
     
     })
     }
@@ -90,6 +90,7 @@ function toWordsconver(s) {
               <>
                     
                   
+                  <h1 className="formNo">{opformno}</h1>
                   <h1 className="fname">{x.name}</h1>
                   <h1 className="fmaterial">{x.material}</h1>
                   <h1 className="fmark">{x.mark}</h1>
