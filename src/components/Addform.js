@@ -12,14 +12,19 @@ export default function Addform() {
     const touchtxt = document.getElementById('touch').value
     const datetxt = document.getElementById('date').value
     var firebaseRef =await firebase.database().ref('forms').child(formno).set({name:nametxt,material:materialtxt,mark:marktxt,touch:touchtxt,date:datetxt})
-    printTouch(formno,nametxt,materialtxt,marktxt,touchtxt,datetxt)
-    window.open('/output')
-
+   
+    window.open(`/outform/${formno}`)
+    document.getElementById('formno').value=" "
+    document.getElementById('name').value=" "
+    document.getElementById('material').value=" "
+    document.getElementById('mark').value=" "
+    document.getElementById('touch').value=" "
+    document.getElementById('date').value=" "
+      
   }
-  const printTouch = (formno,nametxt,materialtxt,marktxt,touchtxt,datetxt) =>{
-<Outform formno={formno} nametxt={nametxt} materialtxt={materialtxt} marktxt={marktxt} touchtxt={touchtxt} datetxt={datetxt}></Outform>
+ 
   
-  }
+  
   
     return (
         
@@ -42,7 +47,7 @@ export default function Addform() {
     </div>
    <div class="form-group">
       <label for="number">touch:</label>
-      <input type="number" max="100" class="form-control" id="touch" placeholder="Enter Touch" name="text" />
+      <input type="number"  class="form-control" id="touch" placeholder="Enter Touch" name="text" />
     </div>
    <div class="form-group">
       <label for="text">Date:</label>

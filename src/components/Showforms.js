@@ -2,6 +2,7 @@ import React , {useEffect , useState} from 'react'
 import firebase from '../util/firebase'
 
 export default function Showforms() {
+ 
     const [LastForm , setLastForm]= useState([])
     var count = 0
     
@@ -24,7 +25,7 @@ export default function Showforms() {
     }, []) 
     return (
         <div class="table1">
-        <table class="table">
+        <table class="table" id="myTable">
   <thead>
     <tr>
       <th scope="col">Form No</th>
