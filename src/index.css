@@ -1,0 +1,13 @@
+
+
+.btn-primary{
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+
+}
+.table1{
+  overflow-x: scroll;
+}
