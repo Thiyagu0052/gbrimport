@@ -1,5 +1,7 @@
 
-
+body{
+  position: relative;
+}
 .btn-primary{
   position: relative;
   display: block;
@@ -10,4 +12,65 @@
 }
 .table1{
   overflow-x: scroll;
+}
+.formNo{
+  position: absolute;
+  color: brown;
+  right: 120px;
+  top: 154px;
+  font-size: 25px;
+}
+
+.fmaterial{
+  position: absolute;
+  top: 250px;
+  left: 80px;
+  font-size: 20px;
+  
+  
+}
+.fname{
+  position: absolute;
+  top: 200px;
+  left: 120px;
+  font-size: 18px;
+}
+.fmark{
+  position: absolute;
+  top: 285px;
+  right: 160px;
+  font-size: 20px;
+  
+}
+.fdate{
+  position: absolute;
+  top: 330px;
+  left: 120px;
+  font-size: 15px;
+}
+.ftouch{
+  position: absolute;
+  top: 379px;
+  right: 300px;
+  
+}
+.ftouch1{
+  position: absolute;
+  top: 370px;
+  left: 100px;
+}
+.ftouch2{
+  position: absolute;
+  top: 370px;
+  left: 190px;
+}
+.ftouch3{
+  position: absolute;
+  top: 370px;
+  right: 200px;
+}
+.ftouch4{
+  position: absolute;
+  top: 370px;
+  right: 100px;
 }
