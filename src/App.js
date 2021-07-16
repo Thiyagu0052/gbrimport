@@ -4,6 +4,7 @@ import { Switch,Route} from 'react-router-dom'
 import Showforms from './components/Showforms';
 import Addform from './components/Addform';
 import Header from './components/Header';
+import Outform from './components/Outform';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Header/>
           <Showforms />
           </Route>
+          <Route path="/outform/:id" component={Outform} ></Route>
          
         </Switch>
     </div>

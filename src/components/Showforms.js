@@ -45,6 +45,7 @@ export default function Showforms() {
       <td>{x.formDetails.mark}</td>
       <td>{x.formDetails.touch}</td>
       <td>{x.formDetails.date}</td>
+      <td><a target="_blank" href={`outform/${x.formno}`}><button><span class="fa fa-print"/></button></a></td>
       
     </tr>
        

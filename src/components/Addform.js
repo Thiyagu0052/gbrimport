@@ -1,8 +1,9 @@
 import React from 'react'
 import firebase from '../util/firebase'
-
+import Outform from './Outform'
+import {Switch,Route} from 'react-router-dom'
 export default function Addform() {
-  const sendData = ()=>{
+  const sendData =async ()=>{
     console.log("sended")
     const formno = document.getElementById('formno').value
     const nametxt = document.getElementById('name').value
@@ -10,9 +11,15 @@ export default function Addform() {
     const marktxt = document.getElementById('mark').value
     const touchtxt = document.getElementById('touch').value
     const datetxt = document.getElementById('date').value
-    var firebaseRef = firebase.database().ref('forms').child(formno).set({name:nametxt,material:materialtxt,mark:marktxt,touch:touchtxt,date:datetxt})
+    var firebaseRef =await firebase.database().ref('forms').child(formno).set({name:nametxt,material:materialtxt,mark:marktxt,touch:touchtxt,date:datetxt})
+    printTouch(formno,nametxt,materialtxt,marktxt,touchtxt,datetxt)
+    window.open('/output')
+
   }
+  const printTouch = (formno,nametxt,materialtxt,marktxt,touchtxt,datetxt) =>{
+<Outform formno={formno} nametxt={nametxt} materialtxt={materialtxt} marktxt={marktxt} touchtxt={touchtxt} datetxt={datetxt}></Outform>
   
+  }
   
     return (
         
