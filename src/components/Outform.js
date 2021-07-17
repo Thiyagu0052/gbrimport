@@ -95,7 +95,8 @@ function toWordsconver(s) {
                   <h1 className="fmaterial">{x.material}</h1>
                   <h1 className="fmark">{x.mark}</h1>
                   <h1 className="fdate">{x.date}</h1>
-                  <h1 className="ftouch">{x.touch}</h1>
+                  <h1 className="ftouch">{x.touch.slice(0,2)}</h1>
+                  <h1 className="ftouchslice">{x.touch.slice(3,)}</h1>
                 
                   <h1 className="ftouch1">{toWordsconver(parseInt(x.touch[0]))}</h1>
                   <h1 className="ftouch2">{toWordsconver(parseInt(x.touch[1]))}</h1>

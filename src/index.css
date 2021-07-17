@@ -48,10 +48,17 @@ body{
   left: 120px;
   font-size: 15px;
 }
+/* 1st 2digit */
 .ftouch{
   position: absolute;
   top: 379px;
-  right: 300px;
+  right: 300px;    
+}
+/* 2nd two digit */
+.ftouchslice{
+  position: absolute;
+  top: 379px;
+  right: 280px;
   
 }
 .ftouch1{
