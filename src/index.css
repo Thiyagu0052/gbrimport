@@ -52,19 +52,19 @@ body{
 .ftouch{
   position: absolute;
   top: 379px;
-  right: 350px;    
+  right: 410px;    
 }
 /* 2nd two digit */
 .ftouchslice{
   position: absolute;
   top: 379px;
-  right: 290px;
+  right: 310px;
   
 }
 .ftouch1{
   position: absolute;
   top: 370px;
-  left: 100px;
+  left: 20px;
    font-size: 20x;
    text-transform:capitalize;
      font-size: 30px;
@@ -74,7 +74,7 @@ body{
 .ftouch2{
   position: absolute;
   top: 370px;
-  left: 190px;
+  left: 130px;
    font-size: 20x;
    text-transform:capitalize;
      font-size: 30px;
