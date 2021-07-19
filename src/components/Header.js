@@ -24,7 +24,7 @@ export default function Header() {
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="/newEntry">New Enry</a></li>
+        <li><a href="/newEntry">New Entry</a></li>
         <li ><a href="/entries">Entry's</a></li>
         
         

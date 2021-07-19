@@ -2,7 +2,16 @@ import firebase from "../util/firebase";
 import React from 'react'
 
 export default function Addform() {
-  
+  var curday = function(sp){
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; //As January is 0.
+    var yyyy = today.getFullYear();
+    
+    if(dd<10) dd='0'+dd;
+    if(mm<10) mm='0'+mm;
+    return (mm+sp+dd+sp+yyyy);
+    };
   const sendData = ()=>{
     
     const formno = document.getElementById('formno').value
@@ -45,7 +54,7 @@ export default function Addform() {
     </div>
    <div className="form-group">
       <label >Date:</label>
-      <input type="text" className="form-control un" id="date" placeholder="Enter text" name="date" />
+      <input type="text" value={curday("-")} className="form-control un" id="date" placeholder="Enter text" name="date" />
     </div>
    
     <input type="button" value="submit" className="btn btn-primary send un" onClick={sendData} />
