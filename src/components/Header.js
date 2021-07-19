@@ -1,6 +1,15 @@
 import React from 'react'
 
+
 export default function Header() {
+  if(sessionStorage.getItem("email") === null){
+    window.open("/","_self")
+  }
+  function logout(){
+    sessionStorage.removeItem("email")
+    window.open("/","_self")
+   
+  }
     return (
         <div>
   <nav class="navbar navbar-inverse">
@@ -11,18 +20,21 @@ export default function Header() {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">Gb Refinery</a>
+      <a class="navbar-brand" href="#" onClick={logout}>Gb Refinery</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="/">New Enry</a></li>
+        <li><a href="/newEntry">New Enry</a></li>
         <li ><a href="/entries">Entry's</a></li>
         
         
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        
+        <li><a onClick={logout}><span class="glyphicon glyphicon-user"></span> Sign Out</a></li>
+       
+        
+      
       </ul>
     </div>
   </div>

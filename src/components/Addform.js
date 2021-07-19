@@ -1,61 +1,55 @@
+import firebase from "../util/firebase";
 import React from 'react'
-import firebase from '../util/firebase'
-import Outform from './Outform'
-import {Switch,Route} from 'react-router-dom'
+
 export default function Addform() {
-  const sendData =async ()=>{
-    console.log("sended")
+  
+  const sendData = ()=>{
+    
     const formno = document.getElementById('formno').value
     const nametxt = document.getElementById('name').value
     const materialtxt = document.getElementById('material').value
     const marktxt = document.getElementById('mark').value
     const touchtxt = document.getElementById('touch').value
     const datetxt = document.getElementById('date').value
-    var firebaseRef =await firebase.database().ref('forms').child(formno).set({name:nametxt,material:materialtxt,mark:marktxt,touch:touchtxt,date:datetxt})
+    console.log(formno+nametxt+materialtxt+marktxt+touchtxt+datetxt)
+
+    // console.log()
+    var  path =  firebase.database().ref('forms').child(formno);
+   path.set({name:nametxt,material:materialtxt,mark:marktxt,touch:touchtxt,date:datetxt});
    
-    window.open(`/outform/${formno}`)
-    document.getElementById('formno').value=" "
-    document.getElementById('name').value=" "
-    document.getElementById('material').value=" "
-    document.getElementById('mark').value=" "
-    document.getElementById('touch').value=" "
-    document.getElementById('date').value=" "
+ 
       
   }
- 
-  
-  
-  
-    return (
-        
-    <form class="form-inline" action="#">
-   <div class="form-group">
-      <label for="number">Form no:</label>
-      <input type="number" class="form-control" id="formno" placeholder="Enter Form number" name="text" />
+  return (
+    <div>
+       <form className="form-inline" action="/newEntry">
+   <div className="form-group">
+      <label >Form no:</label>
+      <input type="number" className="form-control un" id="formno" placeholder="Enter Form number" name="formno" />
     </div>
-   <div class="form-group">
-      <label for="text">Name:</label>
-      <input type="text" class="form-control" id="name" placeholder="Enter text" name="text" />
+   <div className="form-group">
+      <label >Name:</label>
+      <input type="text" className="form-control un" id="name" placeholder="Enter text" name="name" />
     </div>
-   <div class="form-group">
-      <label for="text">Material:</label>
-      <input type="material" class="form-control" id="material" placeholder="Enter Material" name="material" />
+   <div className="form-group">
+      <label >Material:</label>
+      <input type="material" className="form-control un" id="material" placeholder="Enter Material" name="material" />
     </div>
-   <div class="form-group">
-      <label for="text">Mark:</label>
-      <input type="text" class="form-control" id="mark" placeholder="Enter Mark" name="text" />
+   <div className="form-group">
+      <label >Mark:</label>
+      <input type="text" className="form-control un" id="mark" placeholder="Enter Mark" name="mark" />
     </div>
-   <div class="form-group">
-      <label for="number">touch:</label>
-      <input type="number"  class="form-control" id="touch" placeholder="Enter Touch" name="text" />
+   <div className="form-group">
+      <label >touch:</label>
+      <input type="number"  className="form-control un" id="touch" placeholder="Enter Touch" name="touch" />
     </div>
-   <div class="form-group">
-      <label for="text">Date:</label>
-      <input type="text" class="form-control" id="date" placeholder="Enter text" name="text" />
+   <div className="form-group">
+      <label >Date:</label>
+      <input type="text" className="form-control un" id="date" placeholder="Enter text" name="date" />
     </div>
    
-    <button type="submit" class="btn btn-primary send" onClick={sendData}>Submit</button>
+    <input type="button" value="submit" className="btn btn-primary send un" onClick={sendData} />
   </form>
-        
-    )
+    </div>
+  )
 }

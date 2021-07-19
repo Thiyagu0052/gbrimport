@@ -1,4 +1,4 @@
-export  const num = function numberToEnglish(n, custom_join_character) {
+ function numberToEnglish(n, custom_join_character) {
 
     var string = n.toString(),
         units, tens, scales, start, end, chunks, chunksLen, chunk, ints, i, word, words;
